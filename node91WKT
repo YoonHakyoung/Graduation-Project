@@ -1,0 +1,37 @@
+file = open("/Users/yoon/Downloads/node.txt", "r")
+
+wktList = []
+
+while True:
+    line = file.readline()
+    if not line:
+        break
+    
+    wktList.append((line.strip()).split(', '))
+
+#print(wktList)
+
+file.close()
+
+import json
+with open("/Users/yoon/python/node.json", 'r') as nodeWKTfile:
+    nodeWKTData = json.load(nodeWKTfile)
+    nodeData = nodeWKTData["NODE"]
+
+#print(nodeData)     # [ [위도, 경도], [노드번호] ]
+#print(wktList)      # [ 위도, 경도 ] - (91개)
+
+node91_ID = []      
+node91_ID_WKT = {}
+
+for i in wktList:
+    for j in nodeData:
+        if i == j[0]:
+            node91_ID_WKT[j[1]] = j[0]
+            
+            node91_ID.append(j[1])
+
+print(node91_ID_WKT)
+
+with open('nodeID_WKT.json', 'w') as f :
+    json.dump(node91_ID_WKT, f, ensure_ascii=False, indent="\t")

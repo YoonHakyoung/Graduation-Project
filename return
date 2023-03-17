@@ -1,0 +1,7 @@
+def sum(x, y):
+    return x, y
+
+test = sum(1, 2)
+
+print(test)
+print(type(test))
