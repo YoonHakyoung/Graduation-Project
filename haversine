@@ -1,0 +1,9 @@
+from haversine import haversine
+
+# 위경도 입력
+startNode = (37.49991567325866, 127.02474007614695)  #Latitude, Longitude
+endNode = (37.50024624497899, 127.0245865268313)
+
+# 거리 계산
+len =  haversine(startNode, endNode, unit = 'm') 
+print(int(len))

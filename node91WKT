@@ -27,7 +27,8 @@ node91_ID_WKT = {}
 for i in wktList:
     for j in nodeData:
         if i == j[0]:
-            node91_ID_WKT[j[1]] = j[0]
+            latilong = [float(j[0][0]), float(j[0][1])]
+            node91_ID_WKT[j[1]] = latilong
             
             node91_ID.append(j[1])
 

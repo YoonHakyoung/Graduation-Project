@@ -1,17 +1,30 @@
 from collections import deque
+from haversine import haversine
 
 class Graph:
 
-    def __init__(self, adjacency_list):
+    def __init__(self, adjacency_list, wktData):
         self.adjacency_list = adjacency_list
+        self.wktData = wktData
 
     def get_neighbors(self, v):
         return self.adjacency_list[v]
 
-    def h(self, n): return 0
+    def printWKT(self, wktList):
+        testList = {}
+        for pathnodeID in wktList:
+            testList[pathnodeID] = wktData[pathnodeID]
+        return testList
+    
+    def h(self, n, stop_node):
+        hStart = self.wktData[n]
+        hStop = self.wktData[stop_node]
+
+        len =  int(haversine(hStart, hStop, unit = 'm') )
+        return len
 
     def a_star_algorithm(self, start_node, stop_node):
-
+        
         open_list = set([start_node])
         closed_list = set([])
 
@@ -25,7 +38,7 @@ class Graph:
             n = None
 
             for v in open_list:
-                if n == None or g[v] + self.h(v) < g[n] + self.h(n):
+                if n == None or g[v] + self.h(v,stop_node) < g[n] + self.h(n,stop_node):
                     n = v;
 
             if n == None:
@@ -44,7 +57,7 @@ class Graph:
                 reconst_path.reverse()
 
                 print('Path found: {}'.format(reconst_path))
-                return reconst_path
+                return self.printWKT(reconst_path)
 
             for (m, weight) in self.get_neighbors(n):
                 if m not in open_list and m not in closed_list:
@@ -154,13 +167,22 @@ adjacency_list = {
     '130148': [('130145', 60), ('71823', 41)], 
     '71820': [('71822', 65), ('130138', 50), ('66722', 52)]
 }
+import json
+with open("/Users/yoon/python/nodeID_WKT.json", 'r') as wktfile:
+    wktData = json.load(wktfile)
 
-graph1 = Graph(adjacency_list)
+graph1 = Graph(adjacency_list, wktData)
 
-path = graph1.a_star_algorithm('194041', '106906')
+start_node = '194041'
+stop_node = '106906'
+print(graph1.a_star_algorithm(start_node, stop_node))
+
+#print(graph1.a_star_algorithm('194041', '106906'))
+#print(graph1.printWKT())
 
 
-## 경로 위경도 ##
+'''
+## 경로 위경도 (AR 참고용) ##
 
 import json
 with open("/Users/yoon/python/nodeID_WKT.json", 'r') as wktfile:
@@ -168,3 +190,4 @@ with open("/Users/yoon/python/nodeID_WKT.json", 'r') as wktfile:
 
 for pathnodeID in path:
     print(wktData[pathnodeID])
+'''
