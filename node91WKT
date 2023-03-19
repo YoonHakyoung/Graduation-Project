@@ -32,7 +32,7 @@ for i in wktList:
             
             node91_ID.append(j[1])
 
-print(node91_ID_WKT)
+print(len(node91_ID_WKT))
 
 with open('nodeID_WKT.json', 'w') as f :
     json.dump(node91_ID_WKT, f, ensure_ascii=False, indent="\t")
