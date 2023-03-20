@@ -20,8 +20,16 @@ class Graph:
         hStart = self.wktData[n]
         hStop = self.wktData[stop_node]
 
-        len =  int( haversine(hStart, hStop, unit = 'm') )
-        return len
+        midnode_lati = abs(self.wktData[n][0] - self.wktData[stop_node][0])
+        midnode_longi = abs(self.wktData[n][1] - self.wktData[stop_node][1])
+        midnode = [midnode_lati, midnode_longi]
+
+        len1 = int( haversine(hStart, midnode, unit = 'm') )
+        len2 = int( haversine(midnode, hStop, unit = 'm') )
+        return (len1 + len2)
+    
+    #def w(self, n, node_safety):
+        
 
     def a_star_algorithm(self, start_node, stop_node):
         
