@@ -34,9 +34,10 @@ class Graph:
         #if "cctv" in self.node_safety[n]:
         #    safety = safety * 0.9
         if "house" in self.node_safety[n]:
-            safety = safety * 0.3  
+            safety = safety * 0.01  
         #if "bell" in self.node_safety[n]:
         #    safety = safety * 0.5  
+        #print(safety)
         return safety
 
     def a_star_algorithm(self, start_node, stop_node):
@@ -54,10 +55,10 @@ class Graph:
             n = None
             
             for v in open_list:
-                if n != None:
-                    print(v,(g[v] + self.h(v, stop_node)) * self.w(v, node_safety), n,(g[n] + self.h(n, stop_node)) * self.w(n, node_safety))
-                if n == None or (g[v] + self.h(v, stop_node)) * self.w(v, node_safety) < (g[n] + self.h(n, stop_node)) * self.w(n, node_safety):
-                    n = v
+                #if n != None:
+                    #print(v,(g[v] + self.h(v, stop_node)) * self.w(v, node_safety), n,(g[n] + self.h(n, stop_node)) * self.w(n, node_safety))
+                if n == None or g[v] * self.w(v, node_safety) < g[n] * self.w(n, node_safety):
+                    n = v;
                     
             if n == None:
                 print('Path does not exist!')
@@ -110,12 +111,12 @@ with open("/Users/yoon/python/adList.json", 'r') as adListfile:
 with open("/Users/yoon/python/node2.json", 'r') as wktfile:
     wktData = json.load(wktfile)
 
-with open("/Users/yoon/python/nodeinHouse_wkt.json", 'r') as safetyfile:
-    nodeinHouse = json.load(safetyfile)
+with open("/Users/yoon/python/node_safety.json", 'r') as safetyfile:
+    node_safety = json.load(safetyfile)
 
 graph1 = Graph(adjacency_list, wktData, node_safety)
 
-start_node = '193994'
+start_node = '252'
 stop_node = '193725'
 
 print(graph1.a_star_algorithm(start_node, stop_node))
