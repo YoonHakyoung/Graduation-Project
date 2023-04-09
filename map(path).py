@@ -4,11 +4,11 @@ import nearest
 import json
 
 result = a_result.result
-print(result['lati,longi'])
+
 # 지도 초기 위치 설정
-latitude = 37.566345
-longitude = 126.977893
-map = folium.Map(location=[latitude, longitude], zoom_start=12)
+latitude = 37.502687
+longitude = 127.025225
+map = folium.Map(location=[latitude, longitude], zoom_start=30)
 
 # 시각화할 위도, 경도 정보 리스트
 #locations = [[37.5642135, 126.9757646], [37.5666783, 126.9778437], [37.5675453, 126.9778306]]

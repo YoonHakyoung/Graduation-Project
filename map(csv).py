@@ -1,7 +1,7 @@
 import folium
 import pandas as pd
 
-nodes = pd.read_csv('/Users/yoon/python/output.csv')
+nodes = pd.read_csv('adList(wkt).csv')
 
 # 지도의 중심을 설정합니다.
 center = [37.4952, 127.0283]

@@ -1,8 +1,10 @@
 import csv
 
 # CSV 파일 열기
-with open('/Users/yoon/Downloads/전국어린이보호구역표준데이터.csv', 'r', encoding='euc-kr') as f:
+with open('어린이보호구역 위치도.csv', 'r', encoding='euc-kr') as f:
     reader = csv.reader(f)
+
+    next(reader)
 
     #새로운 파일
     with open('어린이보호구역.csv', 'w', newline='') as newfile1:
@@ -11,5 +13,4 @@ with open('/Users/yoon/Downloads/전국어린이보호구역표준데이터.csv'
         #열 이름 만들기
         writer1.writerow(['latitude', 'longitude'])
         for row in reader:
-            if '서울' in row[2]:
-                writer1.writerow([row[4],row[5]])
+            writer1.writerow([row[10],row[9]])

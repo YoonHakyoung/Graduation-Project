@@ -1,13 +1,8 @@
-from collections import deque
-import math
 import json
-import nearest
-
+import csv
 class Graph:
     def __init__(self):
         self.adjacency_list = json.load(open('adList.json'))
-        self.adjacency_list_real = json.load(open('graph.json'))
-        self.wktlist = json.load(open('node.json'))
         self.weights = {}
         with open('weight_element.json', 'r') as f:
             weight_data = json.load(f)
@@ -17,11 +12,7 @@ class Graph:
                 self.weights[node_key] = weights
         # w(n)
         def w(weights):
-            return weights['CCTV'] * 0.01 + \
-                    weights['Children'] * 0.01 + \
-                    weights['Roadside'] * 0.1 + \
-                    weights['Bus'] * 0.1 + \
-                    weights['Alcol'] * 0.9
+            return weights['CCTV'] * 0.01 + weights['Roadside'] * 0.01 + weights['Children'] * 0.01 + weights['Alcol'] * 0.9
         self.w = w
 
     def get_weighted_neighbors(self, v):
@@ -50,29 +41,13 @@ class Graph:
                 return None
             if n == stop_node:
                 reconst_path = []
-                path_wkt = []
                 path_len = 0
-                result = {}
-                while parents[n] != n:
+                while parents[n] != n: 
                     reconst_path.append(n)
                     n = parents[n]
                 reconst_path.append(start_node)
                 reconst_path.reverse()
-                for i in range(len(reconst_path)-1):
-                    current_node = reconst_path[i]
-                    next_node = reconst_path[i+1]
-                    for (neighbor, weight) in self.get_weighted_neighbors(current_node):
-                        if neighbor == next_node:
-                            for (neighbor_real, weight_real) in self.adjacency_list_real[current_node]:
-                                if neighbor_real == neighbor:
-                                    path_len += weight_real
-                            break
-                for pathnode in reconst_path:
-                    path_wkt.append(self.wktlist[pathnode])
-                result["Path found"] = reconst_path
-                result["Total distance"] = path_len
-                result["lati,longi"] = path_wkt
-                return result
+                return reconst_path
             for (m, weight) in self.get_weighted_neighbors(n):
                 if m not in open_list and m not in closed_list:
                     open_list.add(m)
@@ -91,5 +66,4 @@ class Graph:
         return None
 
 graph1 = Graph()
-#nearest_node_id = nearest.find_nearest_node(37.499915, 127.024740, json.load(open('node.json')))
-#graph1.a_star_algorithm(nearest_node_id, '106906')
+print(graph1.a_star_algorithm('194041', '106906'))
