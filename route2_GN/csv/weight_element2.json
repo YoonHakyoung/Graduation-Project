@@ -1,0 +1,692 @@
+[
+	{
+		"node_key": "259",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 2,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "262",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 2,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "278",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 2,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "212123",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "193735",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 4
+		}
+	},
+	{
+		"node_key": "193739",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 3
+		}
+	},
+	{
+		"node_key": "193745",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 4
+		}
+	},
+	{
+		"node_key": "193752",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 4
+		}
+	},
+	{
+		"node_key": "74331",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 10,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71746",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74397",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74396",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74395",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 5,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74394",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74393",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "74391",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71818",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71817",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71811",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 5,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71810",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71809",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71808",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71807",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71806",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 9,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71805",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 9,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71804",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71803",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71802",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71801",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "71800",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 5,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71799",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 2
+		}
+	},
+	{
+		"node_key": "71798",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 2
+		}
+	},
+	{
+		"node_key": "71797",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "71796",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71747",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71748",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71819",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71823",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71824",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71743",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "78034",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "71812",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71813",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "71816",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "134571",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "130148",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130149",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 4,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130150",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 8,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130154",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 2
+		}
+	},
+	{
+		"node_key": "130155",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 2
+		}
+	},
+	{
+		"node_key": "130156",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 2,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "130157",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130158",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 6,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "134568",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "134569",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "134570",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "104660",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "104262",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "104260",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 1
+		}
+	},
+	{
+		"node_key": "104259",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 2
+		}
+	},
+	{
+		"node_key": "104257",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "104256",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 1,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "104254",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 4,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "134603",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130481",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 1,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130480",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 1,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130478",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 1,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "130477",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 1,
+			"Children": 0,
+			"Alcol": 0,
+			"Bus": 0
+		}
+	},
+	{
+		"node_key": "104253",
+		"weights": {
+			"CCTV": 0,
+			"Roadside": 0,
+			"Children": 0,
+			"Alcol": 3,
+			"Bus": 0
+		}
+	}
+]
