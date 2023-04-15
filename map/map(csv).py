@@ -1,7 +1,7 @@
 import folium
 import pandas as pd
 
-nodes = pd.read_csv('csv/대로변.csv')
+nodes = pd.read_csv('csv/유흥시설(사당).csv')
 
 # 지도의 중심을 설정합니다.
 center = [37.4952, 127.0283]
@@ -18,4 +18,4 @@ for _, node in nodes.iterrows():
     marker.add_to(m)
 
 # 지도를 출력합니다.
-m.save('map(Roadside).html')
+m.save('map(Alcol)_SD.html')

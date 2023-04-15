@@ -6,8 +6,18 @@ import json
 result = a_result.result
 
 # 지도 초기 위치 설정
-latitude = 37.499989
-longitude = 127.030460
+latitude = 37.500288
+longitude = 127.024768
+'''
+강남
+latitude = 37.499753
+longitude = 127.029465
+'''
+'''
+사당
+latitude = 37.483517
+longitude = 126.979604
+'''
 map = folium.Map(location=[latitude, longitude], zoom_start=30)
 
 # 시각화할 위도, 경도 정보 리스트

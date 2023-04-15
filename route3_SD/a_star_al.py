@@ -18,6 +18,7 @@ class Graph:
         def w(weight):
             return 2.0 * (1 / (1 + 0.5 * weights['CCTV'] + 0.2 * weights['Children'] + 0.7 * weights['Roadside'] + 0.5 * weights['Bus'] )) - 1 * 0.5 * weights['Alcol']
         '''
+        '''
         def w(weights):
             cctv_weight = weights.get("CCTV", 0) * 3
             roadside_weight = weights.get("Roadside", 0) * 3
@@ -35,8 +36,12 @@ class Graph:
             if score <= 0:
                 return 0.0001
             return score
-
+        '''
+        
+        def w(weights):
+            return weights['CCTV'] * 0.1 + weights['Roadside'] * 0.01 + weights['Children'] * 0.01 + weights['Bus'] * 00.1 + weights['Alcol'] * 1.2
         self.w = w
+        
     def get_weighted_neighbors(self, v):
         neighbors = self.adjacency_list[v]
         weighted_neighbors = []
@@ -45,10 +50,11 @@ class Graph:
                 weight = 1
             else: 
                 weight = self.w(self.weights[neighbor])
+                #weight = 1
                 if weight == 0: weight = 1
-                print(neighbor, self.weights[neighbor], self.w(self.weights[neighbor]))
+                #print(neighbor, self.weights[neighbor], self.w(self.weights[neighbor]))
             weighted_neighbors.append((neighbor, distance * weight))
-            print(neighbor,'distance',distance,'weight',weight,'distance * weight', distance * weight)
+            #print(neighbor,'distance',distance,'weight',weight,'distance * weight', distance * weight)
         return weighted_neighbors
     def h(self, n): return 1
     def a_star_algorithm(self, start_node, stop_node):
@@ -86,12 +92,14 @@ class Graph:
                                     path_len += weight_real
                             break
                 for pathnode in reconst_path:
-                    path_wkt.append(self.wktlist[pathnode])
+                    print(pathnode, self.get_weighted_neighbors(pathnode))
+                    if pathnode not in self.wktlist: pass
+                    else: path_wkt.append(self.wktlist[pathnode])
                 result["Path found"] = reconst_path
                 result["Total distance"] = path_len
                 result["lati,longi"] = path_wkt
                 return result
-            print('n',n,'get_weighted_neighbors',self.get_weighted_neighbors(n))
+            #print('n',n,'get_weighted_neighbors',self.get_weighted_neighbors(n))
             for (m, weight) in self.get_weighted_neighbors(n):
                 #print('open_list', open_list,'\n','closed_list' ,closed_list)
                 
@@ -101,7 +109,7 @@ class Graph:
                     g[m] = g[n] + weight
                 
                 else:
-                    print(g[m] , g[n]  ,weight)
+                   #print(g[m] , g[n]  ,weight)
                     if g[m] > g[n] + weight:
                         g[m] = g[n] + weight
                         parents[m] = n

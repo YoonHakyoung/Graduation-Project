@@ -8,11 +8,14 @@ firebase_admin.initialize_app(cred)
 
 # Firestore 데이터베이스에서 데이터 가져오기
 db = firestore.client()
-doc_ref = db.collection('GPS').document('member1@gmail.com')
-doc = doc_ref.get()
-if doc.exists:
-    data = doc.to_dict()
-    wktdata = [data['lat'], data['lon']]
-    print(wktdata)
-else:
-    print('No such document!')
+doc_ref = db.collection('GPS').document('seocho@gmail.com')
+
+# Hnode 필드의 위도(latitude)와 경도(longitude) 값을 가져와 startGPS에 저장
+start_lat = doc_ref.get().to_dict()['Hnode']['latitude']
+start_lon = doc_ref.get().to_dict()['Hnode']['longitude']
+startGPS = [start_lat, start_lon]
+
+# destination 필드의 위도(latitude)와 경도(longitude) 값을 가져와 endGPS에 저장
+end_lat = doc_ref.get().to_dict()['destination']['latitude']
+end_lon = doc_ref.get().to_dict()['destination']['longitude']
+endGPS = [end_lat, end_lon]
