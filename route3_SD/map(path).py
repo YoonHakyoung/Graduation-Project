@@ -1,9 +1,7 @@
 import folium
-import a_result
+from a_result import result
 import nearest
 import json
-
-result = a_result.result
 
 # 지도 초기 위치 설정
 latitude = 37.500288

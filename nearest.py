@@ -2,10 +2,6 @@ import numpy as np
 from sklearn.neighbors import KDTree
 import json
 
-import numpy as np
-from sklearn.neighbors import KDTree
-import json
-
 def find_nearest_node(wktlist):
     with open('Project/node.json', 'r') as f:
         nodes = json.load(f)

@@ -13,7 +13,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # JSON 파일에서 데이터 로드
-with open('path.json', 'r') as f:
+with open('route3_SD/path.json', 'r') as f:
     data = json.load(f)
 
 # 'lati,longi' 필드에서 위도, 경도 값 추출
@@ -23,7 +23,7 @@ for lat, lng in lati_longi:
     points.append(firestore.GeoPoint(lat, lng))
 
 # 'PATH' 컬렉션에 있는 'seocho@gmail.com' 도큐먼트에 'point' 필드 추가
-doc_ref = db.collection('PATH').document('seocho@gmail.com').collection('POINT').document('points')
+doc_ref = db.collection('PATH').document('seocho@gmail.com')
 doc_ref.set({'points': points})
 
 # 'total distance' 필드에서 정수 값 추출

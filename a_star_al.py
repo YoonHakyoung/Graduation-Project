@@ -64,7 +64,7 @@ class Graph:
                                     path_len += weight_real
                             break
                 for pathnode in reconst_path:
-                    print(pathnode, self.get_weighted_neighbors(pathnode))
+                    #print(pathnode, self.get_weighted_neighbors(pathnode))
                     if pathnode not in self.wktlist: pass
                     else: path_wkt.append(self.wktlist[pathnode])
                 result["Path found"] = reconst_path
@@ -88,5 +88,5 @@ class Graph:
         print('Path does not exist!')
         return None
     
-graph1 = Graph()
-print(graph1.a_star_algorithm('194041', '106906'))
+#graph1 = Graph()
+#print(graph1.a_star_algorithm('194041', '106906'))
