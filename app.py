@@ -1,18 +1,18 @@
 from flask import Flask, request, jsonify, render_template
 import json
 from nearest import find_nearest_node
-#from flask_cors import CORS
 import a_star_al
 
 app = Flask(__name__)
-#CORS(app) # CORS 허용
 
 @app.route('/api', methods=['GET', 'POST'])
 def api():
     if request.method == 'POST':
         data = request.json.get('data')
+
         if data is None:
             return jsonify({'result': 'Invalid request'}), 400
+        
         graph01 = a_star_al.Graph()
         start_node = find_nearest_node(data['startID'])
         end_node = find_nearest_node(data['endID'])
@@ -21,13 +21,8 @@ def api():
     elif request.method == 'GET':
         return jsonify({'message': 'This is a GET request'}), 200
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
 
 '''
 from a_result import lati1, lati2, longi1, longi2
