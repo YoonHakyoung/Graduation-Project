@@ -22,7 +22,7 @@ def api():
         return jsonify({'message': 'This is a GET request'}), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=51634)
 
 '''
 from a_result import lati1, lati2, longi1, longi2
