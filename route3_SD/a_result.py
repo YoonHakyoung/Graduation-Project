@@ -20,11 +20,11 @@ longi2 = 126.979476
 #startID = nearest.find_nearest_node([37.504603 ,127.024747])
 #endID = nearest.find_nearest_node([37.507876, 127.026821])
 
-'''
+
 #강남
-startID = nearest.find_nearest_node([37.498661 ,127.027775])
-endID = nearest.find_nearest_node([37.501318, 127.029222])
-'''
+#startID = nearest.find_nearest_node([37.498661 ,127.027775])
+#endID = nearest.find_nearest_node([37.501318, 127.029222])
+
 
 #print(startID,endID)
 

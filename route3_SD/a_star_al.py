@@ -16,7 +16,7 @@ class Graph:
                 self.weights[node_key] = weights
 
         def w(weights):
-            return weights['CCTV'] * 0.3 + weights['Roadside'] * 0.01 + weights['Children'] * 0.01 + weights['Bus'] * 00.1 + weights['Alcol'] * 1.2
+            return weights['CCTV'] * 0.3 + weights['Roadside'] * 0.1 + weights['Children'] * 0.05 + weights['Bus'] * 0.1 + weights['Alcol'] * 1.2
         self.w = w
     def get_weighted_neighbors(self, v):
         neighbors = self.adjacency_list[v]
