@@ -1,4 +1,3 @@
-import sys
 from firebase_admin import credentials, firestore, initialize_app
 from time import sleep
 from nearest import find_nearest_node

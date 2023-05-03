@@ -1,7 +1,7 @@
 import pandas as pd
 from math import sin, cos, sqrt, atan2, radians
 
-df = pd.read_csv('merged_safe.csv')
+df = pd.read_csv('csv/merged_safe.csv')
 
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371  # radius of the earth in kilometers
@@ -12,21 +12,22 @@ def haversine(lat1, lon1, lat2, lon2):
     d = R * c
     return d
 
-#현재위치_논현1파출소
-lat = 37.514026
-lon = 127.028346
+def find_closest(lat, lon, num_rows=3):
+    distances = []
+    for _, row in df.iterrows():
+        distance = haversine(row['latitude'], row['longitude'], lat, lon)
+        distances.append(distance)
 
-distances = []
-for _, row in df.iterrows():
-    distance = haversine(row['latitude'], row['longitude'], lat, lon)
-    distances.append(distance)
+    df['distance'] = distances
+    closest_rows = df.sort_values('distance').head(num_rows)
 
-# add the distances to the DataFrame
-df['distance'] = distances
+    result = {}
+    j = 0
+    for i, row in enumerate(closest_rows.itertuples()):
+        j = j+1
+        result["[{0}]{1}".format(j,row.type)] = (row.latitude, row.longitude)
 
-# sort the DataFrame by distance and select the 5 closest rows
-closest_rows = df.sort_values('distance').head(3)
-result = {}
-for i, row in enumerate(closest_rows.itertuples()):
-    result[(row.latitude, row.longitude)] = row.type
+    return result
+
+result = find_closest(37.514026,127.028346)
 print(result)

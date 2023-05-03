@@ -10,6 +10,3 @@ def find_nearest_node(wktlist):
     dist, ind = tree.query([wktlist], k=1)
     nearest_node_key = list(nodes.keys())[ind[0][0]]
     return nearest_node_key
-
-#nearest_node_key = find_nearest_node([37.504603 ,127.024747])
-#print(nearest_node_key)  # 출력 결과: 164469
