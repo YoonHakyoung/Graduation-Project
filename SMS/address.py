@@ -9,9 +9,9 @@ def reverse_geocode(latitude, longitude):
 
     # 주소 출력 (문자열 분리 후 뒤집기, 두 번째 값 삭제)
     address_list = location.address.split(', ')
-    address_list.pop(-2)  # 두 번째 값 삭제
+    del address_list[-2:]
     reversed_address = ' '.join(address_list[::-1])
     
     return reversed_address
 
-#print(reverse_geocode(37.211745, 126.953032))
+print(reverse_geocode(37.211745, 126.953032))

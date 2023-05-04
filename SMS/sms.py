@@ -1,5 +1,5 @@
 from firebase_admin import credentials, firestore, initialize_app
-from time import sleep
+from time import sleep, strftime, localtime
 from address import reverse_geocode
 import send_sms
 from send_sms import send_sms
@@ -18,8 +18,9 @@ def on_snapshot(doc_snapshot, changes, read_time):
             lat = data['Hnode']['latitude']
             lon = data['Hnode']['longitude']
             address = reverse_geocode(lat, lon)
-            print(address)
-            send_sms(1066529450, 'test', address)
+            current_time = strftime("%Y-%m-%d %H:%M:%S", localtime())
+            sms = '[abb]\n{0} 위급상황 발생\n아이 위치:{1}'.format(current_time,address)
+            send_sms(1066529450, 'test', sms)
 
 # 이벤트 리스너 등록
 doc_watch = db.collection('Report').on_snapshot(on_snapshot)
