@@ -11,10 +11,12 @@ initialize_app(cred)
 db = firestore.client()
 
 def on_snapshot(doc_snapshot, changes, read_time):
-    for doc in doc_snapshot:
-        data = doc.to_dict()
-        if 'destination' in data and 'Hnode' in data:
-            if changes and 'destination' in data:
+    for change in changes:
+        if change.type.name == 'MODIFIED':
+            doc_ref = db.collection('PATH2').document(change.document.id)
+            data = change.document.to_dict()
+
+            if 'destination' in data and 'Hnode' in data:
                 start_lat = data['Hnode']['latitude']
                 start_lon = data['Hnode']['longitude']
                 startGPS = [start_lat, start_lon]
@@ -28,12 +30,11 @@ def on_snapshot(doc_snapshot, changes, read_time):
 
                 result = Graph().a_star_algorithm(startID, endID)
 
-                # 결과를 Firestore에 업로드
-                doc_ref = db.collection('PATH2').document(doc.id)
                 path = []
                 for lat_lon in result["lati,longi"]:
                     path.append(firestore.GeoPoint(lat_lon[0], lat_lon[1]))
                 doc_ref.set({'path': path, 'total': result["Total distance"]})
+
 
 # 이벤트 리스너 등록
 doc_watch = db.collection('GPS').on_snapshot(on_snapshot)

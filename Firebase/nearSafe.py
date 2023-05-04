@@ -29,5 +29,5 @@ def find_closest(lat, lon, num_rows=3):
 
     return result
 
-result = find_closest(37.514026,127.028346)
-print(result)
+#result = find_closest(37.514026,127.028346)
+#print(result)
